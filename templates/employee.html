@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>DB Model</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<body>
+
+    <h1>Hello</h1>
+
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Address</th>
+        </tr>
+
+        {% if emp_list %}
+
+        {% for employeee in emp_list %}
+
+        <tr>
+            <td>{{employeee.empNo}}</td>
+            <td>{{employeee.empName}}</td>
+            <td>{{employeee.empSalary}}</td>
+            <td>{{employeee.empAddress}}</td>
+        </tr>
+
+        {% endfor %}
+
+        {% endif %}
+
+        
+    </table>
+</body>
+</html>
